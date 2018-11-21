@@ -47,8 +47,16 @@
 	}
 }
 
-.admin-logo {
-	// padding: 24px;
+.admin-table {
+
+	@at-root {
+		.admin-table-head {
+			align-items: center;
+			display: flex;
+			justify-content: space-between;
+			margin-bottom: 24px;
+		}
+	}
 }
 
 .admin-nav {
