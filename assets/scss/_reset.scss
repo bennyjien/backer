@@ -347,8 +347,11 @@ select {
 
 table {
 	background-color: $white;
-	border: 1px solid $color-border;
-	width: 100%;
+	border-style: hidden;
+	border-radius: 4px;
+	box-shadow: 0 0 0 2px $color-border;
+	margin: 2px;
+	width: calc(100% - 2px * 2);
 
 	caption {
 		color: $color-text-light;
@@ -363,19 +366,35 @@ table {
 
 	th,
 	td {
-		border-bottom: 1px solid $color-border;
-		border-top: 1px solid $color-border;
-		padding: 4px 8px;
+		@include font-size-400;
+		border-bottom: 1px solid $color-border-light;
+		border-top: 1px solid $color-border-light;
 		text-align: left;
 		vertical-align: top;
 	}
 
+	td {
+		padding: 16px 8px;
+	}
+
 	thead {
+		background-color: $color-100;
 
 		th {
-			vertical-align: top;
-			border-bottom: 1px solid $color-border;
+			border-bottom: 2px solid $color-border;
 			border-top: 0;
+			color: $color-text-light;
+			padding: 6px 8px;
+			font-weight: 400;
+			vertical-align: top;
+
+			&:first-child {
+				border-top-left-radius: 4px;
+			}
+
+			&:last-child {
+				border-top-right-radius: 4px;
+			}
 		}
 	}
 

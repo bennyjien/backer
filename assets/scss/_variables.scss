@@ -44,10 +44,9 @@ $color-alert-600: 		#A81B20;
 $color-alert-700: 		#7D1B20;
 $color-alert-800: 		#52181C;
 
-$color-text-lighter: 	$color-400;
-$color-text-light: 		$color-500;
-$color-text: 					$color-600;
-$color-text-dark: 		$color-800;
+$color-text-lighter: 	$color-500;
+$color-text-light: 		$color-600;
+$color-text: 					$color-800;
 
 $color-bg-light: 			$color-100;
 $color-bg: 						$color-700;
@@ -91,7 +90,7 @@ $text-shadow-800: 		0 0 12px rgba($color-800, 0.04), 0 12px 24px 0 rgba($color-8
 
 // TYPOGRAPHY
 
-$sans-serif: 					"Helvetica Neue", sans-serif;
+$sans-serif: 					sans-serif;
 $serif: 							Georgia, serif;
 $monospace: 					Menlo, Monaco, Consolas, "Courier New", monospace;
 

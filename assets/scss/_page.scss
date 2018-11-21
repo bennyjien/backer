@@ -1,3 +1,18 @@
+.page-breadcrumb {
+	@include font-size-400;
+	color: $color-text-light;
+
+	.link {
+		color: $color-text;
+		font-weight: 700;
+	}
+}
+
+.page-title {
+	font-weight: 300;
+	margin-bottom: 32px;
+}
+
 .page-navigation {
 	align-items: center;
 	border-top: 1px solid $color-border;
