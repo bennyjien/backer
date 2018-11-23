@@ -15,42 +15,58 @@
 
 .page-navigation {
 	align-items: center;
-	border-top: 1px solid $color-border;
 	display: flex;
 	justify-content: space-between;
-	margin-top: 24px;
-	padding-top: 24px;
 
 	@at-root {
 
-		.page-navigation-list {
-			@include clearfix;
-			list-style: none;
-			margin: 0;
-			padding: 0;
+		.page-navigation-record {
+
+			.count {
+				@include font-size-400;
+				color: $color-text-light;
+			}
+
+			.value {
+				font-weight: 700;
+			}
 		}
 
-		.page-navigation-arrow {
-			@include clearfix;
-			list-style: none;
-			margin: 0;
-			padding: 0;
+		.page-navigation-list {
+			align-items: center;
+			display: flex;
 
-			.link {
-				height: 32px;
+			.count {
+				@include font-size-400;
+				color: $color-text-light;
+				margin: 0 16px 0 0;
+			}
+
+			.value {
+				font-weight: 700;
+			}
+
+			.items {
+				display: flex;
+				list-style: none;
+				margin: 0;
 				padding: 0;
-				width: 32px;
+			}
+
+			.item {
+
 			}
 		}
 	}
 
 	.link {
-		background-color: $color-one-500;
+		background-color: $color-200;
+		border: 1px solid $color-border;
 		border-radius: 4px;
-		color: $white;
+		color: $color-text;
 		display: block;
 		min-width: 32px;
-		padding: 4px 8px;
+		padding: 7px;
 		position: relative;
 		text-align: center;
 		text-decoration: none;
@@ -58,44 +74,40 @@
 
 		&:hover,
 		&:focus {
-			background-color: $color-one-400;
+			background-color: $color-one-500;
+			border-color: $color-one-500;
 			color: $white;
 		}
 	}
 
 	.item {
-		float: left;
 		margin-right: 4px;
 
 		&:last-child {
 			margin-right: 0;
 		}
 
-		&.item-current {
-
-			.link {
-				background-color: $color-500;
-				pointer-events: none;
-
-				&:hover,
-				&:focus {
-					background-color: $color-500;
-				}
-			}
-		}
-
 		&.item-inactive {
 
 			.link {
-				background-color: $color-one-300;
+				background-color: $color-200;
+				color: $color-400;
 				pointer-events: none;
 			}
 		}
 	}
 
+	.input {
+		padding-left: 4px;
+		padding-right: 4px;
+		text-align: center;
+		width: 48px;
+	}
+
 	.icon {
-		fill: $white;
-		height: 100%;
+		display: block;
+		fill: currentColor;
+		height: 24px;
 		width: 24px;
 	}
 }
