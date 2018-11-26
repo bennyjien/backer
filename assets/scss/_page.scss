@@ -2,6 +2,7 @@
 	@include font-size-400;
 	color: $color-text-light;
 
+	.parent,
 	.link {
 		color: $color-text;
 		font-weight: 700;

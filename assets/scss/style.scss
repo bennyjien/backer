@@ -38,12 +38,16 @@ Tags: responsive-layout, mobile-first
 @import "admin";
 @import "avatar";
 @import "form";
+@import "menu";
 @import "page";
 @import "popup";
 @import "search";
-@import "slider";
+@import "stat";
 @import "table";
 @import "toggle";
+
+// theme
+@import "transaction";
 
 // media
 @import "mobile";

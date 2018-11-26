@@ -22,13 +22,14 @@
 			padding: 12px 48px;
 
 			.attribution {
-				@include font-size-300;
+				@include font-size-200;
 				color: $color-text-light;
 				text-align: right;
 			}
 
 			.link {
 				color: $color-text-light;
+				font-weight: 700;
 			}
 		}
 	}
@@ -57,7 +58,18 @@
 			margin-bottom: 24px;
 		}
 
+		.admin-table-search {
+			flex: 0 1 50%;
+			margin-left: auto;
+		}
+
 		.admin-table-body {
+
+			.small {
+				@include font-size-200;
+				color: $color-text-light;
+				display: block;
+			}
 
 			.pending {
 				color: $color-alert-500;
@@ -69,6 +81,10 @@
 
 			.fail {
 				color: $color-text-lighter;
+			}
+
+			.action {
+				position: relative;
 			}
 
 			.more {

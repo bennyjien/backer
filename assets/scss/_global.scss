@@ -116,7 +116,7 @@
 
 	&.icon-inline {
 		position: relative;
-		top: -2px;
+		top: -1px;
 	}
 }
 
@@ -218,6 +218,60 @@
 		top: 0;
 		width: 100%;
 		z-index: 2;
+	}
+}
+
+.table {
+
+	.th {
+
+		&.is-sortable {
+			cursor: pointer;
+
+			&:after {
+				content: "";
+				background-color: $color-text-lighter;
+				display: inline-block;
+				height: 20px;
+				mask-image: url(../images/symbols/icon-caret-down.svg);
+				mask-size: contain;
+				opacity: 0;
+				transition: all 0.2s ease-out;
+				vertical-align: bottom;
+				width: 20px;
+			}
+
+			&:hover,
+			&:focus {
+
+				&:after {
+					opacity: 1;
+				}
+			}
+		}
+
+		&.is-active {
+			color: $color-one-500;
+
+			&:after {
+				background-color: currentColor;
+				opacity: 1;
+			}
+		}
+
+		&.is-asc {
+
+			&:after {
+				mask-image: url(../images/symbols/icon-caret-up.svg);
+			}
+		}
+
+		&.is-desc {
+
+			&:after {
+				mask-image: url(../images/symbols/icon-caret-down.svg);
+			}
+		}
 	}
 }
 

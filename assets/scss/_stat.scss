@@ -1,0 +1,17 @@
+.stat-table {
+
+	@at-root {
+		.stat-table-body {
+
+			.table {
+
+				td {
+
+					&:first-child {
+						font-weight: 700;
+					}
+				}
+			}
+		}
+	}
+}

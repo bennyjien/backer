@@ -1,4 +1,5 @@
 <!-- @import variables -->
+<!-- $admin-toggle-items-1: toggled -->
 <!-- $admin-nav-admin-home: link is-current -->
 <!-- @import header -->
 
@@ -8,105 +9,59 @@
 						<div class="admin-page-container">
 							<header class="admin-page-header">
 								<div class="page-breadcrumb">
-									<p class="breadcrumb"><a href="#" class="link">Transaksi</a> /  <span class="current">Registrasi Domain</span></p>
+									<p class="breadcrumb"><span class="parent">Admin Area</span> /  <span class="current">Admin Home</span></p>
 								</div>
 								<div class="avatar-nav">
-									<a href="#" class="initial">AD</a>
+									<div class="avatar-nav-link">
+										<a href="#avatar-nav-menu" class="link js-toggle"><span class="initial">AD</span></a>
+									</div>
+									<div id="avatar-nav-menu" class="avatar-nav-menu">
+										<ul class="items">
+											<li class="item">
+												<a class="link" href="#">Account</a>
+											</li>
+											<li class="item">
+												<a class="link" href="#">Logout</a>
+											</li>
+										</ul>
+									</div>
 								</div>
 							</header>
 							<div class="admin-page-content">
-								<h1 class="page-title">Registrasi Domain</h1>
 								<section class="section">
-									<div class="admin-table">
-										<div class="admin-table-head">
-											<a href="#" class="button button-green"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-plus" /></svg> Add New</a>
-											<div class="search-bar">
-												<input type="text" class="input" placeholder="Domain, Pemilik, No. Order">
-												<button class="button button-gray">Cari Domain</button>
-											</div>
-										</div>
-										<div class="admin-table-body">
+									<h1 class="page-title">Admin Home</h1>
+								</section>
+								<section class="section">
+									<div class="stat-table">
+										<div class="stat-table-body">
 											<table class="table">
-												<thead>
-													<tr>
-														<th class="th is-sortable is-active">Tanggal</th>
-														<th class="th is-sortable">Domain</th>
-														<th class="th is-sortable">Pemilik</th>
-														<th class="th is-sortable">No. Order</th>
-														<th class="th is-sortable">Status</th>
-														<th class="th"></th>
-													</tr>
-												</thead>
 												<tbody>
 													<tr>
-														<td>26/10/2018 10:15</td>
-														<td><a href="#">ayoayo.id</a></td>
-														<td>Calvin Lukmantara</td>
-														<td>5BD286D2B12D0</td>
-														<td class="pending">Pending</td>
-														<td><a class="more" href="#">More</a></td>
+														<td><a href="#" class="link">Trouble Ticket terbuka</a></td>
+														<td>0</td>
 													</tr>
 													<tr>
-														<td>26/10/2018 06:31</td>
-														<td><a href="#">pinjamdoku.com</a></td>
-														<td>Rama Prahara</td>
-														<td>-</td>
-														<td class="fail">Gagal</td>
-														<td><a class="more" href="#">More</a></td>
+														<td><a href="#" class="link">UKR menunggu validasi</a></td>
+														<td>2</td>
 													</tr>
 													<tr>
-														<td>26/10/2018 06:15</td>
-														<td><a href="#">pinjamdoku.com</a></td>
-														<td>Rama Prahara</td>
-														<td>-</td>
-														<td class="fail">Gagal</td>
-														<td><a class="more" href="#">More</a></td>
+														<td><a href="#" class="link">Registrasi Domain terpending belum divalidasi</a></td>
+														<td>-342</td>
 													</tr>
 													<tr>
-														<td>25/10/2018 16:51</td>
-														<td><a href="#">bonitafoods.co.id</a></td>
-														<td>Gavin Albertus</td>
-														<td>5BD18E498132F</td>
-														<td class="approved">Approved</td>
-														<td><a class="more" href="#">More</a></td>
+														<td><a href="#" class="link">Transfer Domain terpending belum divalidasi</a></td>
+														<td>-185</td>
 													</tr>
 													<tr>
-														<td>18/10/2018 12:51</td>
-														<td><a href="#">mangkoq.com</a></td>
-														<td>William Henley</td>
-														<td>242968635</td>
-														<td class="success">Sukses</td>
-														<td><a class="more" href="#">More</a></td>
+														<td><a href="#" class="link">Renewal Domain terpending belum divalidasi</a></td>
+														<td>-1830</td>
+													</tr>
+													<tr>
+														<td><a href="#" class="link">Layanan extra terpending belum divalidasi</a></td>
+														<td>-1</td>
 													</tr>
 												</tbody>
 											</table>
-										</div>
-										<div class="admin-table-foot">
-											<div class="page-navigation">
-												<div class="page-navigation-record">
-													<p class="count"><span class="value">20860</span> records</p>
-												</div>
-												<div class="page-navigation-list">
-													<p class="count"><span class="value">1043</span> pages</p>
-													<ul class="items">
-														<li class="item item-inactive">
-															<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-double-left" /></svg></a>
-														</li>
-														<li class="item item-inactive">
-															<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-left" /></svg></a>
-														</li>
-														<li class="item">
-															<input class="input" type="text" value="1">
-														</li>
-														<li class="item">
-															<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-right" /></svg></a>
-														</li>
-														<li class="item">
-															<a class="link" href="#"><svg class="icon" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-chevron-double-right" /></svg></a>
-														</li>
-													</ul>
-												</div>
-											</div>
 										</div>
 									</div>
 								</section>
