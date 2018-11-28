@@ -1,6 +1,6 @@
 <!-- @import variables -->
-<!-- $admin-toggle-items-transaction: toggled -->
-<!-- $admin-nav-transaction-ukr: link is-current -->
+<!-- $admin-toggle-items-web: toggled -->
+<!-- $admin-nav-web-order: link is-current -->
 <!-- @import header -->
 
 			<div id="site-content" class="site-content">
@@ -9,7 +9,7 @@
 						<div class="admin-page-container">
 							<header class="admin-page-header">
 								<div class="page-breadcrumb">
-									<p class="breadcrumb"><span class="parent">Transaksi</span> /  <span class="current">Transaksi UKR</span></p>
+									<p class="breadcrumb"><span class="parent">Web Template</span> /  <span class="current">Pemesanan</span></p>
 								</div>
 								<div class="avatar-nav">
 									<div class="avatar-nav-link">
@@ -29,18 +29,15 @@
 							</header>
 							<div class="admin-page-content">
 								<section class="section">
-									<h1 class="page-title">Transaksi UKR</h1>
+									<h1 class="page-title">Pemesanan</h1>
 								</section>
 								<section class="section">
 									<div class="admin-table">
 										<div class="admin-table-head">
-											<div class="admin-table-action">
-												<a href="#" class="button button-green"><svg class="icon icon-inline" role="img"><use xlink:href="assets/images/svg-symbols.svg#icon-plus" /></svg> Add New</a>
-											</div>
 											<div class="admin-table-search">
 												<div class="search-bar">
-													<input type="text" class="input" placeholder="Pemilik">
-													<button class="button button-gray">Cari</button>
+													<input type="text" class="input" placeholder="Pemesan, Domain">
+													<button class="button button-gray">Cari Pesanan</button>
 												</div>
 											</div>
 										</div>
@@ -48,27 +45,31 @@
 											<table class="table">
 												<thead>
 													<tr>
-														<th class="th is-sortable is-active">Tanggal</th>
-														<th class="th is-sortable">Pemilik</th>
-														<th class="th is-sortable">Jumlah</th>
+														<th class="th is-sortable is-active">Tgl Order</th>
+														<th class="th is-sortable">Tgl Aktif</th>
+														<th class="th is-sortable">Item</th>
 														<th class="th is-sortable">Harga</th>
+														<th class="th is-sortable">Pemesan</th>
+														<th class="th is-sortable">Domain</th>
 														<th class="th is-sortable">Status</th>
 														<th class="th"></th>
 													</tr>
 												</thead>
 												<tbody>
 													<tr>
-														<td>26/10/2018 10:15</td>
-														<td><a href="#">radio1jak <span class="small">Radio One Jakarta</span></a></td>
-														<td>1 UKR</td>
-														<td>220.000</td>
+														<td>22-02-05</td>
+														<td>24-02-05</td>
+														<td>CORPS5 - Corporate Profile - Kompumania I</td>
+														<td>per Item: 3 UKR</td>
+														<td>jubele <span class="small">Junny Belle</span></td>
+														<td>sma22.net</td>
 														<td>Aktif</td>
 														<td class="action">
-															<a class="more js-toggle" href="#o5BD286D2B12D0">Action</a>
-															<div id="o5BD286D2B12D0" class="menu-popover">
+															<a class="more js-toggle" href="#order-2">Action</a>
+															<div id="order-2" class="menu-popover">
 																<ul class="menu-popover-items">
 																	<li class="menu-popover-item">
-																		<a href="#" class="link">Validasi</a>
+																		<a href="#" class="link">Edit</a>
 																	</li>
 																	<li class="menu-popover-item">
 																		<a href="#" class="link">Delete</a>
@@ -78,17 +79,19 @@
 														</td>
 													</tr>
 													<tr>
-														<td>26/10/2018 06:31</td>
-														<td><a href="#">magdatama <span class="small">Magdalena Santy</span></a></td>
-														<td>2 UKR</td>
-														<td>388.000</td>
-														<td class="success">Aktif</td>
+														<td>01-03-05</td>
+														<td>02-03-05</td>
+														<td>COPALRT - Corporate Profile - Yellow Submarine</td>
+														<td>per Item: 3 UKR</td>
+														<td>slie888 <span class="small">Steven Lie</span></td>
+														<td>www.esunainternational.com</td>
+														<td>Aktif</td>
 														<td class="action">
-															<a class="more js-toggle" href="#o5BD286D2B12D1">Action</a>
-															<div id="o5BD286D2B12D1" class="menu-popover">
+															<a class="more js-toggle" href="#order-3">Action</a>
+															<div id="order-3" class="menu-popover">
 																<ul class="menu-popover-items">
 																	<li class="menu-popover-item">
-																		<a href="#" class="link">Validasi</a>
+																		<a href="#" class="link">Edit</a>
 																	</li>
 																	<li class="menu-popover-item">
 																		<a href="#" class="link">Delete</a>
@@ -98,57 +101,19 @@
 														</td>
 													</tr>
 													<tr>
-														<td>26/10/2018 06:15</td>
-														<td><a href="#">magdatama <span class="small">Magdalena Santy</span></a></td>
-														<td>1 UKR</td>
-														<td>220.000</td>
-														<td class="success">magdatama.com disetujui</td>
+														<td>01-03-05</td>
+														<td>02-03-05</td>
+														<td>COPALRT - Corporate Profile - Red Devil</td>
+														<td>per Paket Hosting: 2 UKR</td>
+														<td>chr777 <span class="small">Christian Tujuh</span></td>
+														<td>capitalvalueknight.com</td>
+														<td>Aktif</td>
 														<td class="action">
-															<a class="more js-toggle" href="#o5BD286D2B12D2">Action</a>
-															<div id="o5BD286D2B12D2" class="menu-popover">
+															<a class="more js-toggle" href="#order-1">Action</a>
+															<div id="order-1" class="menu-popover">
 																<ul class="menu-popover-items">
 																	<li class="menu-popover-item">
-																		<a href="#" class="link">Validasi</a>
-																	</li>
-																	<li class="menu-popover-item">
-																		<a href="#" class="link">Delete</a>
-																	</li>
-																</ul>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>25/10/2018 16:51</td>
-														<td><a href="#">dci <span class="small">Gavin Lukmantara</span></a></td>
-														<td>1 UKR</td>
-														<td>220.000</td>
-														<td class="success">ayoayo.id disetujui</td>
-														<td class="action">
-															<a class="more js-toggle" href="#o5BD18E498132F">Action</a>
-															<div id="o5BD18E498132F" class="menu-popover">
-																<ul class="menu-popover-items">
-																	<li class="menu-popover-item">
-																		<a href="#" class="link">Validasi</a>
-																	</li>
-																	<li class="menu-popover-item">
-																		<a href="#" class="link">Delete</a>
-																	</li>
-																</ul>
-															</div>
-														</td>
-													</tr>
-													<tr>
-														<td>18/10/2018 12:51</td>
-														<td><a href="#">harco <span class="small">Sandy Sugiarto</span></a></td>
-														<td>1 UKR</td>
-														<td>220.000</td>
-														<td class="success">detonesbyafgan.com disetujui</td>
-														<td class="action">
-															<a class="more js-toggle" href="#o242968635">Action</a>
-															<div id="o242968635" class="menu-popover">
-																<ul class="menu-popover-items">
-																	<li class="menu-popover-item">
-																		<a href="#" class="link">Validasi</a>
+																		<a href="#" class="link">Edit</a>
 																	</li>
 																	<li class="menu-popover-item">
 																		<a href="#" class="link">Delete</a>
