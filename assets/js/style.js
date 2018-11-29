@@ -13,9 +13,9 @@
 	svg4everybody();
 
 	// preload images
-	imagesLoaded(document.querySelector('#site-container'), function() {
-		document.body.classList.remove('is-loading');
-	});
+	// imagesLoaded(document.querySelector('#site-container'), function() {
+	// 	document.body.classList.remove('is-loading');
+	// });
 
 	// sticky polyfill
 	const stickyElements = document.getElementsByClassName('js-sticky');
