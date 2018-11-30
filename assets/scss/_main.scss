@@ -14,14 +14,9 @@
 .main-aside {
 	background-color: $color-one-800;
 	color: $white;
-	flex: 1 1 auto;
+	flex: 0 0 auto;
 	order: -1;
-	width: 100%;
-
-	@include breakpoint(runner) {
-		flex: 0 0 auto;
-		width: 256px;
-	}
+	width: 256px;
 
 	a {
 		color: $white;
