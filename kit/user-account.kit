@@ -16,7 +16,7 @@
 									<div id="avatar-nav-menu" class="avatar-nav-menu">
 										<ul class="items">
 											<li class="item">
-												<a class="link" href="#">Account</a>
+												<a class="link" href="user-account.html">Account</a>
 											</li>
 											<li class="item">
 												<a class="link" href="user-login.html">Logout</a>
@@ -31,31 +31,55 @@
 								</section>
 								<section class="section">
 									<form class="form">
-										<div class="form-text">
-											<label for="#" class="label">Nama</label>
-											<input type="text" class="input" value="Admin">
+										<div class="form-input js-form-input">
+											<label for="input-name" class="form-input-heading">Nama</label>
+											<div class="form-input-field is-required">
+												<input type="text" id="input-name" class="input" value="Admin" placeholder="Enter your name">
+											</div>
 										</div>
-										<div class="form-text">
-											<label for="#" class="label">Login</label>
-											<input type="text" class="input" value="admin">
+										<div class="form-input js-form-input">
+											<label for="input-login" class="form-input-heading">Login</label>
+											<div class="form-input-field is-required">
+												<input type="text" id="input-login" class="input" value="admin" placeholder="Enter your login">
+											</div>
 										</div>
-										<div class="form-text">
-											<label for="#" class="label">Email</label>
-											<input type="text" class="input" value="admin@namadomain.com">
+										<div class="form-input js-form-input">
+											<label for="input-email" class="form-input-heading">Email</label>
+											<div class="form-input-field is-required">
+												<input type="email" id="input-email" class="input" value="admin@namadomain.com" placeholder="Enter your email">
+											</div>
 										</div>
-										<div class="form-text">
-											<label for="#" class="label">Telepon</label>
-											<input type="text" class="input" value="081234889900">
+										<div class="form-input js-form-input">
+											<label for="input-role" class="form-input-heading">Role</label>
+											<div class="form-input-select form-input-field is-required">
+												<select name="input-role" id="input-role" class="input">
+													<option value="" disabled selected>Select role</option>
+													<option value="1">Super Admin</option>
+													<option value="2">Admin</option>
+													<option value="3">User</option>
+												</select>
+											</div>
+										</div>
+										<div class="form-input js-form-input">
+											<label for="input-phone" class="form-input-heading">Telepon</label>
+											<div class="form-input-phone form-input-field is-required">
+												<div class="inputs">
+													<input type="text" id="input-phone-area" class="input input-area" value="+62" placeholder="+62" readonly>
+													<input type="text" id="input-phone-number" class="input input-number" value="81234889900" placeholder="Enter your phone">
+												</div>
+											</div>
 										</div>
 										<div class="form-text">
 											<label for="#" class="label">Tanggal Lahir</label>
 											<input type="text" class="input" value="31/10/1980">
 										</div>
-										<!-- <div class="form-radio">
-											<p class="label">Jenis Kelamin</p>
-											<label><input type="radio" name="user-gender" id="user-gender-male" class="input" checked> Laki-laki</label>
-											<label><input type="radio" name="user-gender" id="user-gender-female" class="input"> Perempuan</label>
-										</div> -->
+										<div class="form-radio">
+											<p class="legend">Jenis Kelamin</p>
+											<div class="inputs">
+												<label class="label"><input type="radio" name="input-user-gender" id="input-user-gender-male" class="input" checked> Laki-laki</label>
+												<label class="label"><input type="radio" name="input-user-gender" id="input-user-gender-female" class="input"> Perempuan</label>
+											</div>
+										</div>
 										<div class="form-submit">
 											<button class="button">Save Settings</button>
 										</div>

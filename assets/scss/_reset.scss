@@ -316,21 +316,19 @@ textarea {
 
 select {
 	background-color: $white;
-	background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZlcnNpb249IjEuMSIgeD0iMTJweCIgeT0iMHB4IiB3aWR0aD0iMjRweCIgaGVpZ2h0PSIzcHgiIHZpZXdCb3g9IjAgMCA2IDMiIGVuYWJsZS1iYWNrZ3JvdW5kPSJuZXcgMCAwIDYgMyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSI+PHBvbHlnb24gcG9pbnRzPSI1Ljk5MiwwIDIuOTkyLDMgLTAuMDA4LDAgIi8+PC9zdmc+);
+	background-image: url(data:image/svg+xml;base64,PHN2ZyBoZWlnaHQ9IjI0IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHdpZHRoPSIyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cGF0aCBmaWxsPSIjOEY4RjhGIiBkPSJtNy40MSA3Ljg0IDQuNTkgNC41OCA0LjU5LTQuNTggMS40MSAxLjQxLTYgNi02LTZ6Ii8+PC9zdmc+);
 	background-position: 100% center;
+	background-position: calc(100% - 4px) center;
 	background-repeat: no-repeat;
-	height: 32px;
-	padding: 4px 24px 4px 8px;
+	padding: 7px 24px 7px 8px;
 
 	&[multiple],
 	&[size] {
 		background-image: none;
 		height: auto;
-		padding: 8px;
 	}
 
 	&:hover {
-		border-color: rgba($black, 0.2);
 		outline: 0;
 	}
 

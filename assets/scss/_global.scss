@@ -377,3 +377,16 @@
 		margin-right: calc(-50vw + (1280px - 80px) / 2);
 	}
 }
+
+// UI colors
+.alert {
+	color: $color-alert-500;
+}
+
+.success {
+	color: $color-success-500;
+}
+
+.warning {
+	color: $color-warning-500;
+}

@@ -461,6 +461,33 @@
 		window.addEventListener('resize', unwrapperInit);
 	}();
 
+	// form input animation
+	const formLabelAnimation = function() {
+		const $formLabel = document.querySelectorAll('.js-form-input');
+
+		$formLabel.forEach( element => {
+			let $input = element.querySelector('.input');
+
+			$input.addEventListener('focus', function() {
+				this.parentNode.classList.add('is-filled');
+			});
+
+			$input.addEventListener('blur', function() {
+				var input = this;
+				setTimeout(function() {
+					if (input.value === '') input.parentNode.classList.remove('is-filled');
+				}, 100);
+			});
+
+			window.addEventListener('load', function() {
+				$input.parentNode.classList.add('is-loaded');
+				if ($input.value) {
+					$input.parentNode.classList.add('is-filled');
+				}
+			});
+		});
+	}();
+
 	// form file function
 	/* EXAMPLE
 		<div class="form-file js-form-file">

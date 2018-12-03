@@ -11,7 +11,7 @@
 	}
 }
 
-.form-group {
+.form-inputs {
 	margin: -8px -8px 8px;
 	position: relative;
 
@@ -36,10 +36,152 @@
 	}
 }
 
+.form-input {
+
+	&:not(:last-child) {
+		margin-bottom: 24px;
+	}
+
+	@at-root {
+		.form-input-heading {
+			color: $color-text-light;
+			display: block;
+			margin-bottom: 6px;
+
+			.small {
+				@include font-size-300;
+				display: block;
+			}
+		}
+
+		.form-input-field {
+			position: relative;
+
+			&.is-required {
+
+				&:after {
+					content: "*";
+					color: $color-alert-500;
+					font-family: $monospace;
+					font-size: 14px;
+					line-height: 16px;
+					margin-top: -9px;
+					position: absolute;
+					right: 13px;
+					top: 50%;
+					z-index: 2;
+				}
+			}
+
+			&.is-filled {
+
+				.placeholder {
+					font-weight: 700;
+					transform: scale(0.7) translateY(-10px);
+				}
+			}
+
+			&.is-invalid {
+
+				.placeholder {
+					color: $color-alert-500;
+				}
+
+				.input {
+					border-color: $color-alert-500;
+				}
+			}
+
+			&.is-loaded {
+
+				.placeholder {
+					transition: all 0.2s ease;
+					opacity: 1;
+				}
+			}
+
+			.placeholder {
+				display: block;
+				left: 9px;
+				margin: 0;
+				opacity: 0;
+				pointer-events: none;
+				position: absolute;
+				top: 14px;
+				transform-origin: left top;
+
+				+ .input {
+					padding: 21px 24px 5px 8px;
+				}
+			}
+
+			.input {
+				width: 100%;
+			}
+		}
+
+		.form-input-select {
+
+			&.is-required {
+
+				&:after {
+					right: 32px;
+				}
+			}
+
+			&.is-loaded {
+
+				.placeholder {
+					font-weight: 700;
+					transform: scale(0.7) translateY(-10px);
+				}
+			}
+		}
+
+		.form-input-phone {
+
+			.inputs {
+				display: flex;
+				margin-top: 2px;
+				width: 100%;
+			}
+
+			.input {
+				position: relative;
+
+				&:focus {
+					z-index: 1;
+				}
+
+				&.input-area {
+					border-top-right-radius: 0;
+					border-bottom-right-radius: 0;
+					color: $color-text;
+					flex: 0 1 auto;
+					width: 64px;
+				}
+
+				&.input-number {
+					border-top-left-radius: 0;
+					border-bottom-left-radius: 0;
+					flex: 1 1 auto;
+					margin-left: -1px;
+				}
+			}
+		}
+
+		.form-input-caption {
+			@include font-size-200;
+			color: $color-text-light;
+			margin-top: 6px;
+		}
+	}
+}
+
 .form-file {
 
 	&:not(:last-child) {
-		margin-bottom: 16px;
+		margin-bottom: 24px;
 	}
 
 	.js & {
@@ -137,275 +279,23 @@
 	}
 }
 
-.form-phone {
+.form-radio {
 
 	&:not(:last-child) {
-		margin-bottom: 16px;
+		margin-bottom: 24px;
 	}
 
-	.label {
+	.legend {
 		display: inline-block;
+		margin-bottom: 4px;
 	}
 
 	.inputs {
-		display: flex;
-		margin-top: 2px;
-		width: 100%;
-	}
-
-	.input {
-
-		&.input-code {
-			border-top-right-radius: 0;
-			border-bottom-right-radius: 0;
-			border-right: none;
-			color: $color-text;
-			flex: 0 1 auto;
-			width: 64px;
-		}
-
-		&.input-phone {
-			border-top-left-radius: 0;
-			border-bottom-left-radius: 0;
-			flex: 1 1 auto;
-		}
-	}
-}
-
-.form-rating {
-	align-items: flex-start;
-	display: flex;
-	flex-direction: column;
-
-	&:not(:last-child) {
-		margin-bottom: 16px;
-	}
-
-	.inputs {
-		display: flex;
-		flex-direction: row-reverse;
-		justify-content: flex-end;
-		position: relative;
-
-		&:hover {
-
-			.input {
-
-				+ .label {
-					color: $color-400;
-
-					&:hover {
-						color: $color-one-500;
-					}
-				}
-			}
-		}
-	}
-
-	.input {
-		@include hidden;
-
-		&:checked {
-
-			&:nth-of-type(1) {
-
-				~ .text {
-
-					&:after {
-						content: attr(data-rating-five);
-					}
-				}
-			}
-
-			&:nth-of-type(2) {
-
-				~ .text {
-
-					&:after {
-						content: attr(data-rating-four);
-					}
-				}
-			}
-
-			&:nth-of-type(3) {
-
-				~ .text {
-
-					&:after {
-						content: attr(data-rating-three);
-					}
-				}
-			}
-
-			&:nth-of-type(4) {
-
-				~ .text {
-
-					&:after {
-						content: attr(data-rating-two);
-					}
-				}
-			}
-
-			&:nth-of-type(5) {
-
-				~ .text {
-
-					&:after {
-						content: attr(data-rating-one);
-					}
-				}
-			}
-
-			~ .label {
-				color: $color-one-500;
-			}
-
-			+ .label {
-				color: $color-one-500;
-			}
-		}
-
-		+ .label {
-			color: $color-400;
-			font-size: 24px;
-			margin: 0 -2px;
-			line-height: 24px;
-
-			&:hover {
-				color: $color-one-500;
-
-				~ .label {
-					color: $color-one-500;
-				}
-
-				&:nth-of-type(1) {
-
-					~ .text {
-
-						&:after {
-							content: attr(data-rating-five);
-						}
-					}
-				}
-
-				&:nth-of-type(2) {
-
-					~ .text {
-
-						&:after {
-							content: attr(data-rating-four);
-						}
-					}
-				}
-
-				&:nth-of-type(3) {
-
-					~ .text {
-
-						&:after {
-							content: attr(data-rating-three);
-						}
-					}
-				}
-
-				&:nth-of-type(4) {
-
-					~ .text {
-
-						&:after {
-							content: attr(data-rating-two);
-						}
-					}
-				}
-
-				&:nth-of-type(5) {
-
-					~ .text {
-
-						&:after {
-							content: attr(data-rating-one);
-						}
-					}
-				}
-			}
-		}
-	}
-
-	.icon {
-		display: block;
-		transition: all 0.15s ease-out;
-	}
-
-	.text {
-		left: 100%;
-		margin-left: 8px;
-		order: -1;
-		pointer-events: none;
-		position: absolute;
-		top: 0;
-		white-space: nowrap;
-
-		&:after {
-			@include font-size-400;
-			content: attr(data-rating-none);
-			color: $color-text-light;
-			font-weight: 700;
-		}
-	}
-}
-
-.form-select {
-
-	&:not(:last-child) {
-		margin-bottom: 16px;
+		margin: -4px;
 	}
 
 	.label {
-		display: inline-block;
-		font-weight: 700;
-		margin-bottom: 2px;
-	}
-
-	.input {
-		width: 100%;
-	}
-}
-
-.form-text {
-	position: relative;
-
-	&:not(:last-child) {
-		margin-bottom: 16px;
-	}
-
-	.label {
-		display: inline-block;
-		font-weight: 700;
-		margin-bottom: 2px;
-	}
-
-	.input {
-		width: 100%;
-
-		&.input-textarea {
-			height: 120px;
-			resize: none;
-		}
-	}
-
-	.caption {
-		@include font-size-400;
-		color: $color-text-light;
-		margin: 4px 0;
-
-		&:first-child {
-			margin-top: 0;
-		}
-
-		&:last-child {
-			margin-bottom: 0;
-		}
+		margin: 4px;
 	}
 }
 
@@ -416,6 +306,6 @@
 	}
 
 	&:not(:last-child) {
-		margin-bottom: 16px;
+		margin-bottom: 24px;
 	}
 }
